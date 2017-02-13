@@ -13,39 +13,34 @@ public class Eventyr
                 int antalPersoner = Integer.parseInt(antal);  
             
 		ArrayList<String> personer = new ArrayList<String>(); // liste af strenge
-                System.out.println("Arraystørrelse"+personer.size());
-                while (antalPersoner<personer.size())
-                {
-		String navn = JOptionPane.showInputDialog(frame1, "Vælg navn");
-                // String navn1 = JOptionPane.showInputDialog(frame1, "Vælg navn");
-                // String navn2 = JOptionPane.showInputDialog(frame1, "Vælg navn");
+                
                 for (int i =0; i<antalPersoner; i++)
                 {
+                String navn = JOptionPane.showInputDialog(frame1, "Vælg navn");
                 personer.add(navn);
-		
                 }
-                
-                System.out.println("hje");
-                
+                int randomperson = (int) (Math.random()*antalPersoner);
 		ArrayList<String> handlinger = new ArrayList<String>();
 		handlinger.add("er den vildeste");
 		handlinger.add("holder ud");
 		handlinger.add("har det for sygt");
                 handlinger.add("har været ude for en spirituel opvågning");
                 handlinger.add("kan godt lide peanut butter");
-                
-               
-                
-                
-                
-               
-                
-		for (int i=0; i<5; i++) {
+                //handlinger.add("holder meget af " + personer.get(randomperson));
+                handlinger.add("holder meget af " + personer.get((int)(Math.random()*antalPersoner)));
+                      
+                // handlinger.add(personer.get(randomperson)) + "holder");
+		for (int i=0; i<6; i++) {
 			
 			int personNummer = (int) (Math.random()*antalPersoner); // giver 0-2
 			String person = personer.get( personNummer );
-			String handling = handlinger.get( (int)(Math.random()*handlinger.size()));
+                        int hej = (int)(Math.random()*handlinger.size());
+			String handling = handlinger.get(hej);
 			System.out.println(person + " " + handling);
+                        //handlinger.remove((int)(Math.random()*handlinger.size()));
+                        handlinger.remove(hej);
+                         
     }
+                
   }
 }
