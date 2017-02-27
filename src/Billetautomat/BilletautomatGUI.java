@@ -52,7 +52,7 @@ public class BilletautomatGUI extends javax.swing.JFrame {
       java.util.Scanner tastatur = new java.util.Scanner(System.in);
       valgtBilletPris = tastatur.nextInt();
       
-        initComponents();
+      initComponents();
         billetprisGUI.setText(valgtBilletPris+"kr");
     }
    
@@ -299,7 +299,7 @@ public class BilletautomatGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_købBilletActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
+
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
@@ -467,6 +467,5 @@ public class BilletautomatGUI extends javax.swing.JFrame {
     private javax.swing.JButton udskrivbillet;
     private javax.swing.JTextField ønsketBetaling;
     // End of variables declaration//GEN-END:variables
-
 
 }
