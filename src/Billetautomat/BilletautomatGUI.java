@@ -13,7 +13,7 @@ package Billetautomat;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.*;
-import java.util.Scanner;
+
 /**
  *
  * @author Alexander
@@ -47,10 +47,15 @@ public class BilletautomatGUI extends javax.swing.JFrame {
      */
     public BilletautomatGUI() {
       
-        
+      while (valgtBilletPris != 24)
+        {
         System.out.println("Vælg billetpris");
-      java.util.Scanner tastatur = new java.util.Scanner(System.in);
-      valgtBilletPris = tastatur.nextInt();
+        java.util.Scanner tastatur = new java.util.Scanner(System.in);
+        valgtBilletPris = tastatur.nextInt();
+      
+      if (valgtBilletPris != 24)
+          System.out.println("Ugyldig pris valgt");
+      }
       
       initComponents();
         billetprisGUI.setText(valgtBilletPris+"kr");
@@ -325,6 +330,7 @@ public class BilletautomatGUI extends javax.swing.JFrame {
         manglendeBetaling.setText(sum-betalt+"kr");
         Date tid = new Date();
         transaktioner.add(tid + " Der blev indsat " + betalt1 + "kr"); 
+        
      }
       
          if (betalt == sum || betalt > sum)
