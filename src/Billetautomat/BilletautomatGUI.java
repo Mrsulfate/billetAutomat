@@ -355,6 +355,7 @@ public class BilletautomatGUI extends javax.swing.JFrame {
     private void udskrivbilletActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_udskrivbilletActionPerformed
         if (sum == betalt)
         {
+            System.out.println("hej");
             udskrivBillet();
         }
 // JOptionPane.showMessageDialog(null, "Du får " +tilbageBetaling+ "kr tilbage" ); 
