@@ -329,7 +329,14 @@ public class BilletautomatGUI extends javax.swing.JFrame {
         betalt = betalt + betalt2;
         manglendeBetaling.setText(sum-betalt+"kr");
         Date tid = new Date();
+        
         transaktioner.add(tid + " Der blev indsat " + betalt1 + "kr"); 
+        // Opretter objekt for den enkelte transaktion
+        Transaktioner trans = new Transaktioner();
+        trans.tidspunkt = new Date();
+        trans.handlinger = (" Der blev indsat " + betalt1 + "kr");
+        trans.beløb = betalt2;
+        
         
      }
       
@@ -357,12 +364,14 @@ public class BilletautomatGUI extends javax.swing.JFrame {
       }
            System.out.println("Transaktioner pr: " + new Date());
            System.out.println(transaktioner);
+           
        }
     private void udskrivbilletActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_udskrivbilletActionPerformed
         if (sum == betalt)
         {
             System.out.println("hej");
             udskrivBillet();
+            Transaktioner billetUdskrevet = new Transaktioner();
         }
 // JOptionPane.showMessageDialog(null, "Du får " +tilbageBetaling+ "kr tilbage" ); 
     }//GEN-LAST:event_udskrivbilletActionPerformed
